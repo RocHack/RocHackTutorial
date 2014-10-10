@@ -1,5 +1,81 @@
-<h1>Hey there!</h1>
+<head>
+<style type="text/css">
+html
+{
+  font-family: Trebuchet MS, sans-serif;
+}
+@keyframes police
+{
+  from { transform: skewX(-40deg); -ms-transform: skewX(-40deg); background-color:#ff0000; color:#0000ff; text-align: left; }
+  to { transform: skewX(40deg); -ms-transform: skewX(40deg); background-color:#0000ff; color:#ff0000; text-align: right; }
+}
 
-Hello, world!
+@-webkit-keyframes police
+{
+  from { -webkit-transform: skewX(-40deg); background-color:#ff0000; color:#0000ff; text-align: left; }
+  to { -webkit-transform: skewX(40deg); background-color:#0000ff; color:#ff0000; text-align: right; }
+}
 
-<p>Find me in app/views/static_pages/home.html.erb</p>
+@keyframes bgflashy
+{
+  from { background-color:#00ff00; }
+  to { background-color:#ff00ff; }
+}
+
+@-webkit-keyframes bgflashy
+{
+  from { background-color:#00ff00; }
+  to { background-color:#ff00ff; }
+}
+
+@keyframes wobble
+{
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 50%;
+  }
+}
+@-webkit-keyframes wobble
+{
+  from {
+    margin-left: 0%;
+  }
+  to {
+    margin-left: 50%;
+  }
+}
+
+body
+{
+  animation: bgflashy 0.2s infinite alternate linear;
+  -webkit-animation: bgflashy 0.2s infinite alternate linear;
+}
+
+#police
+{
+  animation: police 0.1s infinite alternate linear;
+  -webkit-animation: police 0.1s infinite alternate linear;
+  font-size: 288px;
+  font-weight: bold;
+  width: 1000px;
+}
+
+#container
+{
+  animation: wobble 0.3s infinite alternate linear;
+  -webkit-animation: wobble 0.3s infinite alternate linear;
+}
+
+
+</style>
+
+</head>
+<body>
+<div id="container">
+
+<div id="police">WOOP WOOP WOOP</div>
+
+</div>
+</body>
